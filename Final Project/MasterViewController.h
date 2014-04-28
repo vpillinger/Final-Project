@@ -9,10 +9,17 @@
 #import <UIKit/UIKit.h>
 
 #import <CoreData/CoreData.h>
-
+#import "Game.h"
+#import "NonMananagedGame.h"
 @interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+@property (weak, nonatomic) NSIndexPath * indexPath;
+//@property (strong, nonatomic) NSMutableArray *nonManagedGames;
+
+-(void)addRoundImage:(UIImage *)image game:(Game *)game;
+-(void)addRoundPrompt:(NSString *)prompt game:(Game *)game;
 
 @end

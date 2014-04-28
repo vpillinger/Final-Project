@@ -9,7 +9,9 @@
 #import "MasterViewController.h"
 
 #import "DetailViewController.h"
+#import "GameRoundPrompts.h"
 
+#import "GameRoundImages.h"
 @interface MasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end
@@ -29,6 +31,8 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    //self.nonManagedGames = [[NSMutableArray alloc]init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,11 +45,31 @@
 {
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+    Game *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
     
     // If appropriate, configure the new managed object.
     // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
     [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+    [newManagedObject setValue:@"PictureDash" forKey:@"gameName"];
+    //[newManagedObject setValue:[[NSArray alloc] init] forKey:@"gameRoundImages"];
+    //[newManagedObject setValue:[[NSArray alloc] init] forKey:@"gameRoundPrompts"];
+    
+    //initialize the sets
+    //prompt
+    GameRoundPrompts *prompt1 = [NSEntityDescription insertNewObjectForEntityForName:@"GameRoundPrompts" inManagedObjectContext:context];
+    prompt1.roundPrompts = @"first";
+    NSArray *temp = [NSArray arrayWithObject:prompt1];
+    newManagedObject.roundPrompts = [[NSOrderedSet alloc] initWithArray:temp];
+    //image
+    GameRoundImages *image1 = [NSEntityDescription insertNewObjectForEntityForName:@"GameRoundImages" inManagedObjectContext:context];
+    image1.roundImage = [[UIImage alloc] init];
+    newManagedObject.roundImages = [[NSOrderedSet alloc] initWithObject:image1];
+    
+    //do some stuff
+    //NonMananagedGame *gameStart = [[NonMananagedGame alloc]init];
+    //[gameStart.images addObject:[[UIImage alloc]init]];
+    //[gameStart.prompts addObject:@"first"];
+    //[_nonManagedGames addObject:gameStart];
     
     // Save the context.
     NSError *error = nil;
@@ -56,7 +80,30 @@
         abort();
     }
 }
-
+-(void)addRoundPrompt:(NSString *)prompt game:(Game *)game{
+    Game *object = game;
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    //make prompt
+    GameRoundPrompts *prompt1 = [NSEntityDescription insertNewObjectForEntityForName:@"GameRoundPrompts" inManagedObjectContext:context];
+    prompt1.roundPrompts = prompt;
+    prompt1.myGame = object;
+    //add it to set
+    NSMutableOrderedSet *orderedSet = [[NSMutableOrderedSet alloc]initWithOrderedSet:object.roundPrompts];
+    [orderedSet addObject:prompt1];
+    //set new set as thing
+    object.roundPrompts = orderedSet;
+}
+-(void)addRoundImage:(UIImage *)image game:(Game *)game{
+    Game *object = game;
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    //make image
+    GameRoundImages *image1 = [NSEntityDescription insertNewObjectForEntityForName:@"GameRoundImages" inManagedObjectContext:context];
+    image1.roundImage = image;
+    NSMutableOrderedSet *orderedSet = [[NSMutableOrderedSet alloc]initWithOrderedSet:object.roundImages];
+    [orderedSet addObject:image1];
+    object.roundImages = orderedSet;
+    
+}
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -109,8 +156,13 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        Game *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        _indexPath = indexPath;
         [[segue destinationViewController] setDetailItem:object];
+        [[segue destinationViewController] setMaster:(MasterViewController *)self];
+        //NonMananagedGame *game = [NonMananagedGame objectAtIndex:indexPath.row];
+        //[[segue destinationViewController] setImages:game.images];
+        //[[segue destinationViewController] setPrompts:game.prompts];
     }
 }
 
@@ -124,14 +176,14 @@
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Game" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:YES];
     NSArray *sortDescriptors = @[sortDescriptor];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
@@ -215,7 +267,7 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    Game *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
 }
 

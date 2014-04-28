@@ -17,7 +17,6 @@
 		7CD73B06190DDAB600EF14CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CD73B04190DDAB600EF14CC /* Main.storyboard */; };
 		7CD73B09190DDAB600EF14CC /* Final_Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73B07190DDAB600EF14CC /* Final_Project.xcdatamodeld */; };
 		7CD73B0C190DDAB600EF14CC /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73B0B190DDAB600EF14CC /* MasterViewController.m */; };
-		7CD73B0F190DDAB600EF14CC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73B0E190DDAB600EF14CC /* DetailViewController.m */; };
 		7CD73B11190DDAB600EF14CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CD73B10190DDAB600EF14CC /* Images.xcassets */; };
 		7CD73B18190DDAB600EF14CC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD73B17190DDAB600EF14CC /* XCTest.framework */; };
 		7CD73B19190DDAB600EF14CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD73AF0190DDAB600EF14CC /* Foundation.framework */; };
@@ -25,6 +24,18 @@
 		7CD73B1B190DDAB600EF14CC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD73AF6190DDAB600EF14CC /* CoreData.framework */; };
 		7CD73B23190DDAB600EF14CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7CD73B21190DDAB600EF14CC /* InfoPlist.strings */; };
 		7CD73B25190DDAB600EF14CC /* Final_ProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73B24190DDAB600EF14CC /* Final_ProjectTests.m */; };
+		7CD73B33190DDD6F00EF14CC /* ACEDrawingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73B30190DDD6F00EF14CC /* ACEDrawingTools.m */; };
+		7CD73B34190DDD6F00EF14CC /* ACEDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73B32190DDD6F00EF14CC /* ACEDrawingView.m */; };
+		7CD73B3C190DDEBA00EF14CC /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73B3B190DDEBA00EF14CC /* DrawViewController.m */; };
+		7CD73B3F190DDFC900EF14CC /* ACEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73B3E190DDFC900EF14CC /* ACEViewController.m */; };
+		7CD73B42190DE92600EF14CC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73B41190DE92600EF14CC /* DetailViewController.m */; };
+		7CD73BA1190E078B00EF14CC /* WritingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73BA0190E078B00EF14CC /* WritingViewController.m */; };
+		7CD73BA4190E300000EF14CC /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73BA3190E300000EF14CC /* Game.m */; };
+		7CD73BA7190E300100EF14CC /* GameRoundImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73BA6190E300100EF14CC /* GameRoundImages.m */; };
+		7CD73BAA190E300100EF14CC /* GameRoundPrompts.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73BA9190E300100EF14CC /* GameRoundPrompts.m */; };
+		7CD73BAD190E60A800EF14CC /* HistoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73BAC190E60A800EF14CC /* HistoriesViewController.m */; };
+		7CD73BB0190E728B00EF14CC /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73BAF190E728B00EF14CC /* HistoryViewController.m */; };
+		7CD73BB3190E8B7B00EF14CC /* NonMananagedGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73BB2190E8B7B00EF14CC /* NonMananagedGame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,14 +64,36 @@
 		7CD73B08190DDAB600EF14CC /* Final_Project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Final_Project.xcdatamodel; sourceTree = "<group>"; };
 		7CD73B0A190DDAB600EF14CC /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		7CD73B0B190DDAB600EF14CC /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		7CD73B0D190DDAB600EF14CC /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		7CD73B0E190DDAB600EF14CC /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		7CD73B10190DDAB600EF14CC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7CD73B16190DDAB600EF14CC /* Final ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Final ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD73B17190DDAB600EF14CC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		7CD73B20190DDAB600EF14CC /* Final ProjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Final ProjectTests-Info.plist"; sourceTree = "<group>"; };
 		7CD73B22190DDAB600EF14CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7CD73B24190DDAB600EF14CC /* Final_ProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Final_ProjectTests.m; sourceTree = "<group>"; };
+		7CD73B2F190DDD6F00EF14CC /* ACEDrawingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEDrawingTools.h; sourceTree = "<group>"; };
+		7CD73B30190DDD6F00EF14CC /* ACEDrawingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEDrawingTools.m; sourceTree = "<group>"; };
+		7CD73B31190DDD6F00EF14CC /* ACEDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEDrawingView.h; sourceTree = "<group>"; };
+		7CD73B32190DDD6F00EF14CC /* ACEDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEDrawingView.m; sourceTree = "<group>"; };
+		7CD73B3A190DDEBA00EF14CC /* DrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawViewController.h; path = ../DrawViewController.h; sourceTree = "<group>"; };
+		7CD73B3B190DDEBA00EF14CC /* DrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawViewController.m; path = ../DrawViewController.m; sourceTree = "<group>"; };
+		7CD73B3D190DDFC900EF14CC /* ACEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEViewController.h; sourceTree = "<group>"; };
+		7CD73B3E190DDFC900EF14CC /* ACEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEViewController.m; sourceTree = "<group>"; };
+		7CD73B40190DE92600EF14CC /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = ../DetailViewController.h; sourceTree = "<group>"; };
+		7CD73B41190DE92600EF14CC /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = ../DetailViewController.m; sourceTree = "<group>"; };
+		7CD73B9F190E078B00EF14CC /* WritingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WritingViewController.h; sourceTree = "<group>"; };
+		7CD73BA0190E078B00EF14CC /* WritingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WritingViewController.m; sourceTree = "<group>"; };
+		7CD73BA2190E300000EF14CC /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		7CD73BA3190E300000EF14CC /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		7CD73BA5190E300100EF14CC /* GameRoundImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRoundImages.h; sourceTree = "<group>"; };
+		7CD73BA6190E300100EF14CC /* GameRoundImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameRoundImages.m; sourceTree = "<group>"; };
+		7CD73BA8190E300100EF14CC /* GameRoundPrompts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRoundPrompts.h; sourceTree = "<group>"; };
+		7CD73BA9190E300100EF14CC /* GameRoundPrompts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameRoundPrompts.m; sourceTree = "<group>"; };
+		7CD73BAB190E60A800EF14CC /* HistoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoriesViewController.h; sourceTree = "<group>"; };
+		7CD73BAC190E60A800EF14CC /* HistoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoriesViewController.m; sourceTree = "<group>"; };
+		7CD73BAE190E728B00EF14CC /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		7CD73BAF190E728B00EF14CC /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		7CD73BB1190E8B7B00EF14CC /* NonMananagedGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NonMananagedGame.h; sourceTree = "<group>"; };
+		7CD73BB2190E8B7B00EF14CC /* NonMananagedGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NonMananagedGame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,15 +156,25 @@
 		7CD73AF8190DDAB600EF14CC /* Final Project */ = {
 			isa = PBXGroup;
 			children = (
+				7CD73B2E190DDD6100EF14CC /* AceDrawing */,
+				7CD73B35190DDD9500EF14CC /* DetailViews */,
 				7CD73B01190DDAB600EF14CC /* AppDelegate.h */,
 				7CD73B02190DDAB600EF14CC /* AppDelegate.m */,
 				7CD73B04190DDAB600EF14CC /* Main.storyboard */,
+				7CD73BB1190E8B7B00EF14CC /* NonMananagedGame.h */,
+				7CD73BB2190E8B7B00EF14CC /* NonMananagedGame.m */,
 				7CD73B0A190DDAB600EF14CC /* MasterViewController.h */,
 				7CD73B0B190DDAB600EF14CC /* MasterViewController.m */,
-				7CD73B0D190DDAB600EF14CC /* DetailViewController.h */,
-				7CD73B0E190DDAB600EF14CC /* DetailViewController.m */,
+				7CD73B40190DE92600EF14CC /* DetailViewController.h */,
+				7CD73B41190DE92600EF14CC /* DetailViewController.m */,
 				7CD73B10190DDAB600EF14CC /* Images.xcassets */,
 				7CD73B07190DDAB600EF14CC /* Final_Project.xcdatamodeld */,
+				7CD73BA8190E300100EF14CC /* GameRoundPrompts.h */,
+				7CD73BA9190E300100EF14CC /* GameRoundPrompts.m */,
+				7CD73BA5190E300100EF14CC /* GameRoundImages.h */,
+				7CD73BA6190E300100EF14CC /* GameRoundImages.m */,
+				7CD73BA2190E300000EF14CC /* Game.h */,
+				7CD73BA3190E300000EF14CC /* Game.m */,
 				7CD73AF9190DDAB600EF14CC /* Supporting Files */,
 			);
 			path = "Final Project";
@@ -164,6 +207,58 @@
 				7CD73B21190DDAB600EF14CC /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7CD73B2E190DDD6100EF14CC /* AceDrawing */ = {
+			isa = PBXGroup;
+			children = (
+				7CD73B2F190DDD6F00EF14CC /* ACEDrawingTools.h */,
+				7CD73B30190DDD6F00EF14CC /* ACEDrawingTools.m */,
+				7CD73B31190DDD6F00EF14CC /* ACEDrawingView.h */,
+				7CD73B32190DDD6F00EF14CC /* ACEDrawingView.m */,
+				7CD73B3D190DDFC900EF14CC /* ACEViewController.h */,
+				7CD73B3E190DDFC900EF14CC /* ACEViewController.m */,
+			);
+			name = AceDrawing;
+			sourceTree = "<group>";
+		};
+		7CD73B35190DDD9500EF14CC /* DetailViews */ = {
+			isa = PBXGroup;
+			children = (
+				7CD73B9E190E073700EF14CC /* WritingViews */,
+				7CD73B90190DEB3F00EF14CC /* HistoryViews */,
+				7CD73B36190DDDC200EF14CC /* DrawViews */,
+			);
+			name = DetailViews;
+			sourceTree = "<group>";
+		};
+		7CD73B36190DDDC200EF14CC /* DrawViews */ = {
+			isa = PBXGroup;
+			children = (
+				7CD73B3A190DDEBA00EF14CC /* DrawViewController.h */,
+				7CD73B3B190DDEBA00EF14CC /* DrawViewController.m */,
+			);
+			name = DrawViews;
+			sourceTree = "<group>";
+		};
+		7CD73B90190DEB3F00EF14CC /* HistoryViews */ = {
+			isa = PBXGroup;
+			children = (
+				7CD73BAE190E728B00EF14CC /* HistoryViewController.h */,
+				7CD73BAF190E728B00EF14CC /* HistoryViewController.m */,
+				7CD73BAB190E60A800EF14CC /* HistoriesViewController.h */,
+				7CD73BAC190E60A800EF14CC /* HistoriesViewController.m */,
+			);
+			name = HistoryViews;
+			sourceTree = "<group>";
+		};
+		7CD73B9E190E073700EF14CC /* WritingViews */ = {
+			isa = PBXGroup;
+			children = (
+				7CD73B9F190E078B00EF14CC /* WritingViewController.h */,
+				7CD73BA0190E078B00EF14CC /* WritingViewController.m */,
+			);
+			name = WritingViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,10 +358,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CD73B0F190DDAB600EF14CC /* DetailViewController.m in Sources */,
+				7CD73BAD190E60A800EF14CC /* HistoriesViewController.m in Sources */,
+				7CD73B34190DDD6F00EF14CC /* ACEDrawingView.m in Sources */,
+				7CD73BA1190E078B00EF14CC /* WritingViewController.m in Sources */,
 				7CD73B0C190DDAB600EF14CC /* MasterViewController.m in Sources */,
+				7CD73BA4190E300000EF14CC /* Game.m in Sources */,
+				7CD73B42190DE92600EF14CC /* DetailViewController.m in Sources */,
+				7CD73BA7190E300100EF14CC /* GameRoundImages.m in Sources */,
+				7CD73B3F190DDFC900EF14CC /* ACEViewController.m in Sources */,
+				7CD73BB0190E728B00EF14CC /* HistoryViewController.m in Sources */,
+				7CD73B33190DDD6F00EF14CC /* ACEDrawingTools.m in Sources */,
+				7CD73B3C190DDEBA00EF14CC /* DrawViewController.m in Sources */,
+				7CD73BAA190E300100EF14CC /* GameRoundPrompts.m in Sources */,
 				7CD73B09190DDAB600EF14CC /* Final_Project.xcdatamodeld in Sources */,
 				7CD73B03190DDAB600EF14CC /* AppDelegate.m in Sources */,
+				7CD73BB3190E8B7B00EF14CC /* NonMananagedGame.m in Sources */,
 				7CD73AFF190DDAB600EF14CC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +578,7 @@
 				7CD73B2A190DDAB600EF14CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7CD73B2B190DDAB600EF14CC /* Build configuration list for PBXNativeTarget "Final ProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +587,7 @@
 				7CD73B2D190DDAB600EF14CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
